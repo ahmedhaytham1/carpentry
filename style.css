@@ -11,12 +11,9 @@ html, body {
   margin: 0;
 }
 
-/* Static Background with your image */
+/* Static Solid Background */
 body {
-  background-image: url('bg.jpg'); /* Replace with your custom image path */
-  background-size: cover; /* Ensure it covers the entire page */
-  background-position: center center; /* Position the image in the center */
-  background-attachment: fixed; /* Keeps the background fixed while scrolling */
+  background-color: #2c3e50; /* Dark Blue color for a professional feel */
   color: #fff;
   font-size: 16px;
   direction: rtl; /* Right-to-left direction for Arabic */
@@ -107,7 +104,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Services Sliding Cards Section */
+/* Services Section */
 .services-slider {
   padding: 50px 0;
   text-align: center;
@@ -129,6 +126,9 @@ body {
   overflow-x: scroll;
   gap: 30px;
   scroll-snap-type: x mandatory;
+  flex-wrap: wrap; /* Allow the cards to wrap */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .service-card {
@@ -142,6 +142,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   scroll-snap-align: center;
   cursor: pointer;
+  margin: 15px;
 }
 
 .service-card:hover {
@@ -274,12 +275,19 @@ footer {
       margin: 10px 0;
   }
 
-  .service-card {
-      width: 70%;
-  }
-
   .hero h1 {
       font-size: 35px;
+  }
+
+  /* Adjust service card display for mobile */
+  .services-container {
+      flex-direction: column; /* Stack the service cards vertically */
+      align-items: center; /* Center the cards */
+  }
+
+  .service-card {
+      width: 80%; /* Set width to 80% for mobile */
+      margin-bottom: 20px; /* Add margin between cards */
   }
 }
 
